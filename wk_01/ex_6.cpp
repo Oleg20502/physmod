@@ -40,6 +40,7 @@ void write_file(std::ostream& stream, NSeq& sequence, const int quantity){
 }
 
 int main(int argc, char** argv){
+    // process cmd args (NAIVE):
     if (argc != 2){
         std::cerr << "Error: wrong number of arguments. Aborting" << std::endl;
         return -1;
