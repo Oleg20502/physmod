@@ -16,7 +16,7 @@ print(raw_ode)
 ode = raw_ode.subs({w0:10, g:2})
 
 # solve ode (general colution)
-sol = sp.dsolve(ode.subs({w0:1}), f(t))
+sol = sp.dsolve(ode, f(t))
 sp.pprint(sol)
 
 # solve initial conditions problem
@@ -49,7 +49,7 @@ p2 = sp.plotting.plot(ivp_sol.diff(t), (t, 0, 20), adaptive=False, nb_of_points=
 
 
 sp.plotting.PlotGrid(2,1, p1, p2)
-
+#%%
 # draw solution plots with matplotlib
 
 import matplotlib.pyplot as plt

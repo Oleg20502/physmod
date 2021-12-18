@@ -20,3 +20,5 @@ add_executable(ex_1.9 "wk_01/ex_9.cpp")
 add_executable(ex_1.10 "wk_01/ex_10.cpp")
 add_executable(ex_1.11 "wk_01/ex_11.c")
 add_executable(ex_1.12 "wk_01/ex_4.cpp")
+
+add_executable(ex_10.1 "wk_10/ex_1.cpp")

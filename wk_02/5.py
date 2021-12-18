@@ -49,3 +49,4 @@ ax.set_title(r'Histogram of IQ: $\mu=100$, $\sigma=15$')
 # Tweak spacing to prevent clipping of ylabel
 fig.tight_layout()
 plt.show()
+plt.savefig('my.png')
