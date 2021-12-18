@@ -70,3 +70,12 @@ rhs[-1] = 1
 print(rhs)
 print(np.linalg.solve(b, rhs))
  
+#%%
+ar[:] = 1
+#%%
+res = np.linalg.solve(b, rhs)
+#%%
+from matplotlib import pyplot as plt
+plt.figure()
+plt.plot(res)
+plt.show()
