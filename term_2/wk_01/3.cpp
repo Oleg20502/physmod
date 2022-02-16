@@ -8,22 +8,23 @@
 #include <iomanip>
 #include <map>
 
-int main()
+int main(int argc, char** argv)
 {
+	if (argc != 2){
+		return 1;
+	}
+	int max_N = std::atoi(argv[1]);
+
 	std::random_device rd{};
 	std::mt19937 gen{rd()};
 
-	std::normal_distribution<> d{5,2};
+	std::normal_distribution<> d{0,1};
 	auto gauss52 = std::bind(d, gen);
 
-	std::map<int, int> hist{};
-	for(int n=0; n<10000; ++n) {
-	 ++hist[std::round(gauss52())];
+	for(int n=0; n<max_N; ++n) {
+	 std::cout << gauss52() << std::endl;
 	}
   			
-  	for(auto p : hist) {
-  	    std::cout << std::setw(2) << p.first << ' ' << std::string(p.second/200, '*') << '\n';
-    }
 
   return 0;
 }
